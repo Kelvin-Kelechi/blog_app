@@ -1,20 +1,17 @@
-const express = require('express')
-const router = express.Router()
+const express = require("express");
+const router = express.Router();
+const {
+  GET_BLOG,
+  GET_A_BLOG,
+  DELETE_BLOG,
+  PATCH_BLOG,
+  POST_BLOG,
+} = require("../controllers/BlogController");
 
-router.get('/',(req, res)=>{
-res.json({msg:'hey just get'})
-})
-router.get('/:id',(req, res)=>{
-res.json({msg:'hey just get only id'})
-})
-router.post('/',(req, res)=>{
-res.json({msg:'hey just post'})
-})
-router.delete('/:id',(req, res)=>{
-res.json({msg:'hey just delete'})
-})
-router.patch('/:id',(req, res)=>{
-res.json({msg:'hey just patch'})
-})
+router.get("/", GET_BLOG);
+router.get("/:id", GET_A_BLOG);
+router.post("/", POST_BLOG);
+router.delete("/:id", DELETE_BLOG);
+router.patch("/:id", PATCH_BLOG);
 
-module.exports = router
+module.exports = router;
