@@ -18,9 +18,9 @@ const Home = () => {
     <div>
       <div>
         {blog &&
-          blog.map((blogs) => {
-            <Blog key={blogs._id} blogs={blogs} />;
-          })}
+          blog.map((blogs) => (
+            <Blog key={blogs._id} blogs={blogs} />
+          ))}
       </div>
     </div>
   );
