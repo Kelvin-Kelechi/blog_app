@@ -10,7 +10,7 @@ const Blog = ({ blogs }) => {
           {blogs.snippet}
         </p>
         <p>
-          <strong>snippet</strong>
+          <strong>description</strong>
           {blogs.body}
         </p>
       </div>
