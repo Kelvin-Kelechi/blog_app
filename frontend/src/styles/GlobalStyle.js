@@ -1,6 +1,6 @@
 import { createGlobalStyle } from "styled-components";
 
-const Globalstyle = createGlobalStyle.div`
+const Globalstyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
 body {
   background: #f1f1f1;
@@ -22,12 +22,7 @@ header a {
   color: #333;
   text-decoration: none;
 } */
-.pages{
-  max-width: 1400px;
-  padding: 0 20px;
-  margin: 0 auto;
-  
-}
+ 
 /* nav {
   display: flex;
   align-items: center;
@@ -64,6 +59,7 @@ li a:hover:not(.active){
   margin-top: 2px;
 }
 
-`;
+`
+
 export default Globalstyle
 
