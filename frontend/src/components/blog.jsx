@@ -1,8 +1,9 @@
 import React from "react";
+import { BlogFrame } from "../styles/HomeStyle";
 
 const Blog = ({ blogs }) => {
   return (
-    <div>
+    <BlogFrame>
       <div>
         <h2>{blogs.title}</h2>
         <p>
@@ -14,7 +15,7 @@ const Blog = ({ blogs }) => {
           {blogs.body}
         </p>
       </div>
-    </div>
+    </BlogFrame>
   );
 };
 

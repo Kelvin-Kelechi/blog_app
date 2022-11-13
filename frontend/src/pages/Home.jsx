@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Blog from "../components/Blog";
 import { BlogContextHooks } from "../hooks/blogHook";
+import { BlogContainer } from "../styles/HomeStyle";
 const Home = () => {
   const { blog, dispatch } = BlogContextHooks();
 
@@ -16,12 +17,9 @@ const Home = () => {
   }, [dispatch]);
   return (
     <div>
-      <div>
-        {blog &&
-          blog.map((blogs) => (
-            <Blog key={blogs._id} blogs={blogs} />
-          ))}
-      </div>
+      <BlogContainer>
+        {blog && blog.map((blogs) => ( <Blog key={blogs._id} blogs={blogs} />))}
+      </BlogContainer>
     </div>
   );
 };
